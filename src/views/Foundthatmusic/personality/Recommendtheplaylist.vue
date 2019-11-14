@@ -32,6 +32,8 @@
 
 <script>
   import {personality} from '../../../api/interface/personality'
+  import sayMsg from "../../../page/time";
+
   export default {
     name: "Recommendtheplaylist",
     data(){
@@ -50,7 +52,7 @@
 
             let zai = JSON.parse(JSON.stringify(res.result));
             for(var i =0;i<zai.length;i++){
-              zai[i].playCount = this.exchangeNumber(zai[i].playCount);
+              zai[i].playCount = sayMsg.exchangeNumber(zai[i].playCount);
             }
 
             this.lista = zai;
@@ -60,52 +62,8 @@
           this.$message.error('服务器异常')
         }
 
-
       },
 
-      /*转换万，亿*/
-      exchangeNumber(num) {
-        if (num < 10000) {
-          return num;
-        } else if (num > 10000) {
-          let newNum = num/10000;
-          return Math.round(newNum) + "万";
-        }
-      },
-      //获取当前日期
-      myDate(){
-        var myDate = new Date();
-        this.ITem=myDate.getDate()
-        this.trmm=this.tamun(myDate.getDay())
-      },
-
-      //数字转换汉字
-      tamun(n){
-         switch (n){
-           case 1:
-           n= "一";
-           break;
-           case 2:
-             n= "二";
-             break;
-           case 3:
-             n= "三";
-             break;
-           case 4:
-             n= "四";
-             break;
-           case 5:
-             n= "五";
-             break;
-           case 6:
-             n= "六";
-             break;
-           case 0:
-             n= "日";
-             break;
-         }
-         return n;
-      },
        //推荐歌单
       desongs(){
         this.$router.push({path:'/recommendsongs'})
@@ -114,7 +72,8 @@
     },
     mounted(){
       this.djprogram()
-      this.myDate()
+      this.ITem = sayMsg.myDate();
+      this.trmm = sayMsg.tamun();
     }
 
   }
@@ -194,12 +153,7 @@
             width: 100%;
             height: 20%;
             font-size: 13px;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 1;
-            overflow: hidden;
             line-height: 25px;
-
           }
         }
         .tiME {
@@ -213,13 +167,12 @@
             .weEk{
               font-size: 30px;
               position: absolute;
-              top: 15%;
-              left: 35%;
+              top: 12%;
+              left: 29%;
             }
             .Theda{
               font-size: 102px;
-              position: absolute;
-              left: 35%;
+              margin: -6px auto;
               color: #44AAF8;
             }
             .WZ {

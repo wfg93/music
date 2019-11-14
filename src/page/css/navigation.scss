@@ -1,0 +1,219 @@
+.Header {
+  width: 100%;
+  min-width: 1020px;
+  height: 48px;
+  background-color: rgb(95, 184, 251);
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+
+  .lefthand {
+    width: 476px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .lefth {
+      width: 121px;
+      display: flex;
+      font-size: 17px;
+      color: #fff;
+      margin-left: 18px;
+      justify-content: space-between;
+      .mark {
+        width: 22px;
+        height: 22px;
+        border-radius: 9px;
+        background: #fff;
+        text-align: center;
+        line-height: 19px;
+        .icon-wangyiyunyinle {
+          font-size: 16px;
+          background: #fff;
+          color: rgb(95, 184, 251);
+        }
+      }
+    }
+  }
+  .lefthad {
+    width: 278px;
+    display: flex;
+    justify-content: space-between;
+    ul {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      position: relative;
+      li {
+        width: 20px;
+        height: 20px;
+        border: solid 1px #0000004d;
+        i {
+          color: #fff;
+        }
+      }
+      input {
+        width: 210px;
+        height: 21px;
+        border: solid 1px #00000033;
+        border-radius: 10px;
+        color: #b7b7b7;
+        background: #3480d2;
+        padding-left: 6px;
+      }
+      i.el-icon-search {
+        position: absolute;
+        right: 5px;
+        color: #ffffffad;
+      }
+    }
+  }
+  .offside {
+    width: 410px;
+    height: 100%;
+    ul {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      .iconfont {
+        font-size: 20px;
+        color: #ffffffc7;
+      }
+      i {
+        font-size: 18px;
+        color: #ffffffc7;
+      }
+      li {
+        width: 284px;
+        height: 55%;
+        border-right: solid 0.5px #00000063;
+        font-size: 12px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: #fff;
+        .longin {
+          padding: 5px;
+          text-align: center;
+          line-height: 27px;
+          width: 127px;
+          /* border: solid; */
+          display: flex;
+          justify-content: space-between;
+          span {
+            img {
+              width: 30px;
+              height: 30px;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+      li:nth-child(2) {
+        width: 116px;
+        border-right: none;
+      }
+    }
+  }
+}
+
+.el-dialog {
+  height: 54%;
+  .el-dialog_header {
+    width: 301px;
+    margin: auto;
+  }
+  .dialog-footer {
+    display: flex;
+    flex-direction: column;
+    .el-button {
+      width: 100%;
+      background: #e64545;
+      margin: 0 auto;
+    }
+    span {
+      margin: 19px auto 9px;
+    }
+  }
+  .way {
+    height: 44px;
+    display: flex;
+    width: 309px;
+    justify-content: space-between;
+    width: 287px;
+    li {
+      width: 40px;
+      height: 40px;
+      border: solid 1px #9e9e9eb3;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 38px;
+      span {
+        border-bottom: none;
+        font-size: 22px;
+      }
+    }
+    li:nth-child(1) {
+      .icon-weixin1 {
+        color: #67b633;
+      }
+
+      &:hover {
+        background: #67b633;
+        .icon-weixin1 {
+          color: #fff;
+        }
+      }
+    }
+    li:nth-child(2) {
+      .icon-qq {
+        color: #34a0df;
+      }
+
+      &:hover {
+        background: #34a0df;
+        .icon-qq {
+          color: #fff;
+        }
+      }
+    }
+    li:nth-child(3) {
+      .icon-weibo {
+        color: #ea4848;
+      }
+
+      &:hover {
+        background: #ea4848;
+        .icon-weibo {
+          color: #fff;
+        }
+      }
+    }
+    li:nth-child(4) {
+      .icon-wangyi {
+        color: #d33a31;
+      }
+
+      &:hover {
+        background: #d33a31;
+        .icon-wangyi {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .waY {
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    span {
+      margin: 0px;
+    }
+  }
+  .redfont {
+    color: red;
+  }
+}

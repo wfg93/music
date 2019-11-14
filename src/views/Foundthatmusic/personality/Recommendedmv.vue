@@ -6,7 +6,7 @@
     </ul>
     <div class="theost">
       <ul>
-        <li v-for="(item,index) in lista" :key="index">
+        <li v-for="(item,index) in lista" :key="index" class="THeo">
           <div class="IMG">
             <img :src="item.picUrl"/>
             <div class="wenzi"><i class="el-icon-video-camera"> {{item.playCount}}</i></div>
@@ -53,90 +53,6 @@
 </script>
 
 <style lang="scss" scoped>
-  .Thehost{
-    width: 95%;
-    height: 286px;
-    min-width:780px;
-    max-width: 1034px;
-    margin: 45px auto;
-    .UL{
-      width: 100%;
-      height: 34px;
-      display: flex;
-      justify-content: space-between;
-      line-height: 32px;
-      font-size: 18px;
-      border-bottom: solid 1px #00000029;
-    }
-    .theost{
-      width: 100%;
-      height: 84%;
-      margin-top: 12px;
-      ul{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        li{
-          width: 24%;
-          height: 100%;
-          .IMG{
-            overflow: hidden;
-            cursor: pointer;
-            width: 100%;
-            height: 66%;
-            display: flex;
-            align-items: flex-end;
-            position: relative;
-            img{
-              width: 100%;
-              height: 100%;
-              transition: 2s transform;
-              transform: scale(1.1);
+  @import '../../../page/css/mall.scss';
 
-            }
-
-            .wenzi{
-              width: 100%;
-              height: 24px;
-              position: absolute;
-              top: 0px;
-              line-height: 26px;
-              text-align: right;
-              background: #0000001c;
-              font-size: 17px;
-              i.el-icon-video-camera {
-                color: #fff;
-              }
-            }
-
-          }
-
-
-          .IMG:hover{
-
-            .wenzi{
-             display: none;
-            }
-            img{
-              transition: 1s transform;
-              transform: scale(1.3);
-            }
-          }
-
-          .WZ{
-            width: 100%;
-            height: 20%;
-            font-size: 13px;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 1;
-            overflow: hidden;
-            line-height: 25px;
-
-          }
-        }
-      }
-    }
-  }
 </style>

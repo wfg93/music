@@ -14,6 +14,7 @@
   import bottomof from  './components/bottomof'
 
 
+
   export default {
   name: 'App',
     components:{
@@ -21,6 +22,12 @@
       Thesidebar,
       bottomof
     },
+    computed:{
+    title(){
+      return store.state.title
+    }
+
+    }
 }
 </script>
 
